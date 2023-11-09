@@ -13,7 +13,6 @@ conn = psycopg2.connect(database=config("DATABASE"),
                         host=config("HOST"),
                         port=config("PORT"))
 
-# Обработчик команды /add_birthday
 @bot.message_handler(commands=['add_birthday'])
 def add_birthday_handler(message):
     # Парсим аргументы команды
@@ -43,7 +42,6 @@ def add_birthday(user_id, name, birthdate):
     cursor.close()
 
 
-# Обработчик команды /weather
 @bot.message_handler(commands=['weather'])
 def weather_handler(message):
     # Парсим аргументы команды
